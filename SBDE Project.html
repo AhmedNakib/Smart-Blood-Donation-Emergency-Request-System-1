@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Blood Donation & Emergency Request System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
+            <ul class="nav-links">
+                <li><a href="SBDE Project.html" class="active">Home</a></li>
+                <li><a href="register.html">Become a Donor</a></li>
+                <li><a href="search.html">Search Donors</a></li>
+                <li><a href="request.html" class="nav-cta">Emergency Request</a></li>
+                <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <div>
+                <div class="eyebrow"><span class="dot"></span>LIVE NETWORK &middot; DHAKA + 5 DISTRICTS</div>
+                <h1>Every <span>heartbeat</span> waiting for blood deserves an answer, not days.</h1>
+                <p class="lead">A digital bridge between voluntary blood donors and patients in emergencies — register once, get matched by blood group and location, respond when it matters most. </p>
+                <div class="hero-actions">
+                    <a href="register.html" class="btn btn-primary">Register as Donor</a>
+                    <a href="request.html" class="btn btn-outline" style="border-color:#4a4a52; color:#fff;">Post Emergency Request</a>
+                </div>
+            </div>
+            <div class="ecg-wrap">
+                <div class="ecg-label"><span>PULSE / LIVE STATUS</span><span>NORMAL SINUS</span></div>
+                <svg class="ecg-svg" viewBox="0 0 700 120" preserveAspectRatio="none">
+                    <path class="ecg-path" d="M0,60 L120,60 L145,60 L160,20 L180,100 L200,45 L220,60 L340,60 L365,60 L380,20 L400,100 L420,45 L440,60 L560,60 L585,60 L600,20 L620,100 L640,45 L660,60 L700,60"/>
+                </svg>
+                <div class="hero-stats">
+                    <div><div class="num" id="statDonors">0</div><div class="Lab">Registered Donors</div></div>
+                    <div><div class="num" id="statAvailable">0</div><div class="lab">Available Now</div></div>
+                    <div><div class="num" id="statRequests">0</div><div class="lab">Active Requests</div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <script src="script.js"></script>   
+</body>
+</html>
