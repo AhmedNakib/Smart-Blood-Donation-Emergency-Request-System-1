@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Donors — LifeLine BD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="navbar">
+  <div class="container">
+    <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
+    <ul class="nav-links">
+      <li><a href="SBDE Project.html">Home</a></li>
+      <li><a href="register.html">Become a Donor</a></li>
+      <li><a href="search.html" class="active">Search Donors</a></li>
+      <li><a href="request.html" class="nav-cta">Emergency Request</a></li>
+      <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="kicker">Donor directory</span>
+    <h1>Find a donor near you</h1>
+    <p>Filter by blood group, district, and availability. Call or SMS directly from the result card.</p>
+  </div>
+</header>
+<section>
+  <div class="container">
+    <div class="filters">
+      <div class="field">
+        <label for="fBg">Blood group</label>
+        <select id="fBg">
+          <option value="">All groups</option>
+          <option>A+</option><option>A-</option>
+          <option>B+</option><option>B-</option>
+          <option>AB+</option><option>AB-</option>
+          <option>O+</option><option>O-</option>
+</select>
+</div>
+      <div class="field">
+        <label for="fDistrict">District</label>
+        <input type="text" id="fDistrict" placeholder="e.g. Dhaka">
+      </div>
+      <div class="field" style="flex-direction:row; align-items:center; gap:8px;">
+        <input type="checkbox" id="fAvailable" style="width:18px;height:18px;">
+        <label for="fAvailable" style="margin:0;">Available only</label>
+      </div>
+    </div>
+
+    <div class="donor-grid" id="donorGrid"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Smart Blood Donation & Emergency Request System — Desktop &amp; Web Programming course project.</span>
+    <span>Made for learning purposes. Data is stored locally in your browser.</span>
+  </div>
+</footer>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Blood Donation & Emergency Request System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
+            <ul class="nav-links">
+                <li><a href="SBDE Project.html" class="active">Home</a></li>
+                <li><a href="register.html">Become a Donor</a></li>
+                <li><a href="search.html">Search Donors</a></li>
+                <li><a href="request.html" class="nav-cta">Emergency Request</a></li>
+                <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header class="hero">
+        <div class="container">
+            <div>
+                <div class="eyebrow"><span class="dot"></span>LIVE NETWORK &middot; DHAKA + 5 DISTRICTS</div>
+                <h1>Every <span>heartbeat</span> waiting for blood deserves an answer, not days.</h1>
+                <p class="lead">A digital bridge between voluntary blood donors and patients in emergencies — register once, get matched by blood group and location, respond when it matters most. </p>
+                <div class="hero-actions">
+                    <a href="register.html" class="btn btn-primary">Register as Donor</a>
+                    <a href="request.html" class="btn btn-outline" style="border-color:#4a4a52; color:#fff;">Post Emergency Request</a>
+                </div>
+            </div>
+            <div class="ecg-wrap">
+                <div class="ecg-label"><span>PULSE / LIVE STATUS</span><span>NORMAL SINUS</span></div>
+                <svg class="ecg-svg" viewBox="0 0 700 120" preserveAspectRatio="none">
+                    <path class="ecg-path" d="M0,60 L120,60 L145,60 L160,20 L180,100 L200,45 L220,60 L340,60 L365,60 L380,20 L400,100 L420,45 L440,60 L560,60 L585,60 L600,20 L620,100 L640,45 L660,60 L700,60"/>
+                </svg>
+                <div class="hero-stats">
+                    <div><div class="num" id="statDonors">0</div><div class="Lab">Registered Donors</div></div>
+                    <div><div class="num" id="statAvailable">0</div><div class="lab">Available Now</div></div>
+                    <div><div class="num" id="statRequests">0</div><div class="lab">Active Requests</div></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section>
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">How it works</span>
+      <h2>From registration to rescue — four simple steps</h2>
+      <p>No app to install, no complicated sign-up. The whole flow runs in the browser for this demo.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="idx">Step 1</div>
+        <h3>Register once</h3>
+        <p>Donors submit blood group, phone, and location — takes under a minute.</p>
+      </div>
+      <div class="step">
+        <div class="idx">Step 2</div>
+        <h3>Stay listed</h3>
+        <p>Profile stays in the directory, marked available or resting after a recent donation.</p>
+      </div>
+      <div class="step">
+        <div class="idx">Step 3</div>
+        <h3>Request posted</h3>
+        <p>A patient's family posts an emergency request with blood group, hospital, and urgency.</p>
+      </div>
+      <div class="step">
+        <div class="idx">Step 4</div>
+        <h3>Instant match</h3>
+        <p>Matching available donors surface immediately with one-tap call and SMS.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section style="background:var(--paper-dim);">
+    <div class="container">
+        <div class="section-head">
+            <span class="Kicker">Blood group availability</span>
+            <h2>Who' s available right now</h2>
+            <p>Live count of donors currently marked available, grouped by blood type.</p>
+
+        </div>
+        <div class="bg-grid" id="bgGrid"></div>
+    </div>
+    </section>
+    <section>
+  <div class="container">
+    <div class="section-head">
+      <span class="kicker">Emergency feed</span>
+      <h2>Active requests</h2>
+      <p>Anyone can respond — call directly from the card below.</p>
+    </div>
+    <div class="emg-list" id="emgList"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Smart Blood Donation & Emergency Request System — Desktop &amp; Web Programming course project.</span>
+    <span>Made for learning purposes. Data is stored locally in your browser.</span>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+    <script src="script.js"></script>   
+</body>
+</html>
