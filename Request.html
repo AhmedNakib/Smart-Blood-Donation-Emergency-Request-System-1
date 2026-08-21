@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emergency Request — LifeLine BD</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="container">
+    <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
+    <ul class="nav-links">
+      <li><a href="SBDE Project.html">Home</a></li>
+      <li><a href="register.html">Become a Donor</a></li>
+      <li><a href="search.html">Search Donors</a></li>
+      <li><a href="request.html" class="active nav-cta">Emergency Request</a></li>
+      <li><a href="Admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="kicker">Emergency request</span>
+    <h1>Need blood urgently? Post a request</h1>
+    <p>Your request appears instantly to matching available donors on the homepage and search page.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <div id="successBox" class="success-box"></div>
+    <div class="split">
+      <div class="card">
+        <form id="requestForm">
+          <div class="form-grid">
+            <div class="field full">
+              <label for="patient">Patient name</label>
+              <input type="text" id="patient" name="patient" required placeholder="e.g. Kamal Uddin">
+            </div>
+            <div class="field">
+              <label for="bg">Blood group needed</label>
+              <select id="bg" name="bg" required>
+                <option value="">Select</option>
+                <option>A+</option><option>A-</option>
+                <option>B+</option><option>B-</option>
+                <option>AB+</option><option>AB-</option>
+                <option>O+</option><option>O-</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="units">Units needed</label>
+              <input type="number" id="units" name="units" min="1" value="1" required>
+            </div>
+            <div class="field full">
+              <label for="hospital">Hospital name</label>
+              <input type="text" id="hospital" name="hospital" required placeholder="e.g. Dhaka Medical College Hospital">
+            </div>
+            <div class="field">
+              <label for="district">District</label>
+              <input type="text" id="district" name="district" required placeholder="e.g. Dhaka">
+            </div>
+            <div class="field">
+              <label for="urgency">Urgency level</label>
+              <select id="urgency" name="urgency" required>
+                <option value="critical">Critical (within hours)</option>
+                <option value="urgent">Urgent (today/tomorrow)</option>
+                <option value="normal">Normal (this week)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="phone">Contact number</label>
+              <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+            </div>
+            <div class="field full">
+              <label for="notes">Additional notes <span class="hint">(optional)</span></label>
+              <textarea id="notes" name="notes" placeholder="Ward number, doctor's reference, etc."></textarea>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" style="margin-top:22px;">Post Emergency Request</button>
+        </form>
+      </div>
+
+      <div>
+        <div class="section-head" style="margin-bottom:18px;">
+          <span class="kicker">Live feed</span>
+          <h2 style="font-size:1.3rem;">Current requests</h2>
+        </div>
+        <div class="emg-list" id="requestList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <span>Smart Blood Donation & Emergency Request System — Desktop &amp; Web Programming course project.</span>
+    <span>Made for learning purposes. Data is stored locally in your browser.</span>
+  </div>
+</footer>
+
+<script src="request.js"></script>
+</body>
+</html>
