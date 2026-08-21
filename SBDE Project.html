@@ -15,9 +15,9 @@
                 <li><a href="register.html">Become a Donor</a></li>
                 <li><a href="search.html">Search Donors</a></li>
                 <li><a href="request.html" class="nav-cta">Emergency Request</a></li>
-                <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+                <li><a href="Admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
             </ul>
-        </div>x
+        </div>
     </nav>
     <header class="hero">
         <div class="container">
@@ -36,7 +36,7 @@
                     <path class="ecg-path" d="M0,60 L120,60 L145,60 L160,20 L180,100 L200,45 L220,60 L340,60 L365,60 L380,20 L400,100 L420,45 L440,60 L560,60 L585,60 L600,20 L620,100 L640,45 L660,60 L700,60"/>
                 </svg>
                 <div class="hero-stats">
-                    <div><div class="num" id="statDonors">0</div><div class="Lab">Registered Donors</div></div>
+                    <div><div class="num" id="statDonors">0</div><div class="lab">Registered Donors</div></div>
                     <div><div class="num" id="statAvailable">0</div><div class="lab">Available Now</div></div>
                     <div><div class="num" id="statRequests">0</div><div class="lab">Active Requests</div></div>
                 </div>
@@ -77,15 +77,14 @@
 <section style="background:var(--paper-dim);">
     <div class="container">
         <div class="section-head">
-            <span class="Kicker">Blood group availability</span>
-            <h2>Who' s available right now</h2>
+            <span class="kicker">Blood group availability</span>
+            <h2>Who's available right now</h2>
             <p>Live count of donors currently marked available, grouped by blood type.</p>
-
         </div>
         <div class="bg-grid" id="bgGrid"></div>
     </div>
-    </section>
-    <section>
+</section>
+<section>
   <div class="container">
     <div class="section-head">
       <span class="kicker">Emergency feed</span>
@@ -103,10 +102,6 @@
   </div>
 </footer>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="js/firebase-config.js"></script>
 <script src="sbde.js"></script>   
 </body>
 </html>

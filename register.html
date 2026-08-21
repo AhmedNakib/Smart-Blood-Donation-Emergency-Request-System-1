@@ -3,22 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
 <title>Admin Panel — LifeLine BD</title>
+=======
+<title>Become a Donor — LifeLine BD</title>
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
   <div class="container">
+<<<<<<< HEAD
     <div class="brand"><span class="brand-mark"></span> BloodBridge BD <span class="mono" style="font-size:.75rem; color:var(--muted); font-weight:500;">/ admin</span></div>
     <ul class="nav-links">
       <li><a href="SBDE Project.html">Home</a></li>
       <li><a href="search.html">Search Donors</a></li>
       <li><a href="request.html">Emergency Request</a></li>
+=======
+    <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
+    <ul class="nav-links">
+      <li><a href="SBDE Project.html">Home</a></li>
+      <li><a href="register.html" class="active">Become a Donor</a></li>
+      <li><a href="search.html">Search Donors</a></li>
+      <li><a href="request.html" class="nav-cta">Emergency Request</a></li>
+      <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
     </ul>
   </div>
 </nav>
 
+<<<<<<< HEAD
 <section>
   <div class="container">
 
@@ -69,16 +84,83 @@
       </div>
     </div>
 
+=======
+<header class="page-header">
+  <div class="container">
+    <span class="kicker">Donor registration</span>
+    <h1>Join the donor directory</h1>
+    <p>Fill this once — your profile stays searchable for anyone nearby who needs your blood group in an emergency.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container" style="max-width:760px;">
+    <div id="successBox" class="success-box"></div>
+    <div class="card">
+      <form id="registerForm">
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Rafiul Islam">
+          </div>
+          <div class="field">
+            <label for="bg">Blood group</label>
+            <select id="bg" name="bg" required>
+              <option value="">Select</option>
+              <option>A+</option><option>A-</option>
+              <option>B+</option><option>B-</option>
+              <option>AB+</option><option>AB-</option>
+              <option>O+</option><option>O-</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="phone">Phone number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="01XXXXXXXXX">
+          </div>
+          <div class="field">
+            <label for="district">District</label>
+            <input type="text" id="district" name="district" required placeholder="e.g. Dhaka">
+          </div>
+          <div class="field">
+            <label for="area">Area / Thana</label>
+            <input type="text" id="area" name="area" required placeholder="e.g. Mirpur">
+          </div>
+          <div class="field">
+            <label for="lastDonation">Last donation date <span class="hint">(if any)</span></label>
+            <input type="date" id="lastDonation" name="lastDonation">
+          </div>
+          <div class="field full" style="flex-direction:row; align-items:center; gap:10px;">
+            <input type="checkbox" id="available" name="available" style="width:18px;height:18px;" checked>
+            <label for="available" style="margin:0;">I am currently available to donate</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:22px;">Register as Donor</button>
+      </form>
+    </div>
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
   </div>
 </section>
 
 <footer>
   <div class="container">
+<<<<<<< HEAD
     <span>Smart Blood Donation & Emergency Request System — Admin Panel.</span>
     <span>Local system mode enabled.</span>
   </div>
 </footer>
 
 <script src="js/admin.js"></script>
+=======
+    <span>Smart Blood Donation & Emergency Request System — Desktop &amp; Web Programming course project.</span>
+    <span>Made for learning purposes. Data is stored locally in your browser.</span>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+<script src="js/app.js"></script>
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
 </body>
 </html>

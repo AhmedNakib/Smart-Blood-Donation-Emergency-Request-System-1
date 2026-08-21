@@ -22,6 +22,7 @@
 <section>
   <div class="container">
 
+<<<<<<< HEAD
     <div id="loginWrap" class="login-wrap">
       <div class="card">
         <h2>Admin Login</h2>
@@ -30,6 +31,17 @@
           <div class="field" style="margin-bottom:14px;">
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required placeholder="admin@gmail.com">
+=======
+    
+    <div id="loginWrap" class="login-wrap">
+      <div class="card">
+        <h2>Admin Login</h2>
+        <p class="sub">Sign in with your Firebase Authentication admin email and password to access this page.</p>
+        <form id="loginForm">
+          <div class="field" style="margin-bottom:14px;">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="admin@example.com">
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
           </div>
           <div class="field">
             <label for="password">Password</label>
@@ -41,6 +53,10 @@
       </div>
     </div>
 
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
     <div id="dashboard" style="display:none;">
       <div class="admin-topbar">
         <div>
@@ -75,10 +91,21 @@
 <footer>
   <div class="container">
     <span>Smart Blood Donation & Emergency Request System — Admin Panel.</span>
+<<<<<<< HEAD
     <span>Local system mode enabled.</span>
   </div>
 </footer>
 
+=======
+    <span>Access restricted to authenticated admin accounts via Firebase Auth.</span>
+  </div>
+</footer>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<script src="js/firebase-config.js"></script>
+>>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
 <script src="js/admin.js"></script>
 </body>
 </html>
