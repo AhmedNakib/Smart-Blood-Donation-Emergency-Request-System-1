@@ -3,88 +3,24 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-<title>Admin Panel — LifeLine BD</title>
-=======
 <title>Become a Donor — LifeLine BD</title>
->>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav class="navbar">
   <div class="container">
-<<<<<<< HEAD
-    <div class="brand"><span class="brand-mark"></span> BloodBridge BD <span class="mono" style="font-size:.75rem; color:var(--muted); font-weight:500;">/ admin</span></div>
-    <ul class="nav-links">
-      <li><a href="SBDE Project.html">Home</a></li>
-      <li><a href="search.html">Search Donors</a></li>
-      <li><a href="Request.html">Emergency Request</a></li>
-=======
     <div class="brand"><span class="brand-mark"></span> BloodBridge BD</div>
     <ul class="nav-links">
       <li><a href="SBDE Project.html">Home</a></li>
       <li><a href="register.html" class="active">Become a Donor</a></li>
       <li><a href="search.html">Search Donors</a></li>
       <li><a href="Request.html" class="nav-cta">Emergency Request</a></li>
-      <li><a href="admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
->>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
+      <li><a href="Admin.html" style="font-size:.82rem;color:var(--muted);">Admin</a></li>
     </ul>
   </div>
 </nav>
 
-<<<<<<< HEAD
-<section>
-  <div class="container">
-
-    <div id="loginWrap" class="login-wrap">
-      <div class="card">
-        <h2>Admin Login</h2>
-        <p class="sub">Sign in with your admin credentials to access this page.</p>
-        <form id="loginForm">
-          <div class="field" style="margin-bottom:14px;">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required placeholder="admin@gmail.com">
-          </div>
-          <div class="field">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required placeholder="••••••••">
-          </div>
-          <div class="error-text" id="loginError"></div>
-          <button type="submit" class="btn btn-primary btn-block" style="margin-top:10px;">Log In</button>
-        </form>
-      </div>
-    </div>
-
-    <div id="dashboard" style="display:none;">
-      <div class="admin-topbar">
-        <div>
-          <h1 style="font-size:1.5rem;">Admin Dashboard</h1>
-          <p style="color:var(--muted); font-size:.88rem; margin-top:4px;">Signed in as <span id="adminEmailLabel" class="mono"></span></p>
-        </div>
-        <button id="logoutBtn" class="btn btn-outline btn-sm">Log Out</button>
-      </div>
-
-      <div class="conn-note"> Donor Registration Emergency Request <strong>Pending</strong> Accept (Home / Search), Reject— Delete ।</div>
-
-      <div class="admin-tabs">
-        <button class="tab-btn active" data-tab="donors">Donor Registrations</button>
-        <button class="tab-btn" data-tab="requests">Emergency Requests</button>
-      </div>
-
-      <div class="filter-chips">
-        <button class="chip active" data-filter="all">All</button>
-        <button class="chip" data-filter="pending">Pending</button>
-        <button class="chip" data-filter="approved">Approved</button>
-        <button class="chip" data-filter="rejected">Rejected</button>
-      </div>
-
-      <div class="table-wrap" id="tableWrap">
-        <div class="admin-empty">Loading…</div>
-      </div>
-    </div>
-
-=======
 <header class="page-header">
   <div class="container">
     <span class="kicker">Donor registration</span>
@@ -137,30 +73,16 @@
         <button type="submit" class="btn btn-primary btn-block" style="margin-top:22px;">Register as Donor</button>
       </form>
     </div>
->>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
   </div>
 </section>
 
 <footer>
   <div class="container">
-<<<<<<< HEAD
-    <span>Smart Blood Donation & Emergency Request System — Admin Panel.</span>
-    <span>Local system mode enabled.</span>
-  </div>
-</footer>
-
-<script src="js/admin.js"></script>
-=======
     <span>Smart Blood Donation & Emergency Request System — Desktop &amp; Web Programming course project.</span>
-    <span>Made for learning purposes. Data is stored locally in your browser.</span>
+    <span>Made for learning purposes. Data is stored locally using Node.js JSON handling.</span>
   </div>
 </footer>
 
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
-<script src="js/firebase-config.js"></script>
-<script src="js/app.js"></script>
->>>>>>> 60c49f7d427c0913dc3d21bbd82c176efa90036f
+<script src="register.js"></script>
 </body>
 </html>

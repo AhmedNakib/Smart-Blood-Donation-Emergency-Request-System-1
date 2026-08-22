@@ -6,6 +6,7 @@ const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
+// CORS এনাবল করা হয়েছে যাতে ফাইল সরাসরি ওপেন করলেও সার্ভারে ডাটা যায়
 app.use(cors());
 app.use(express.json());
 app.use(express.static(path.join(__dirname)));
@@ -14,7 +15,6 @@ const DONORS_FILE = path.join(__dirname, "donors.json");
 const REQUESTS_FILE = path.join(__dirname, "requests.json");
 const ADMIN_FILE = path.join(__dirname, "admin.json");
 
-// হেল্পার ফাংশন: JSON ফাইল পড়া
 function readData(filePath) {
   try {
     if (!fs.existsSync(filePath)) {
@@ -28,7 +28,6 @@ function readData(filePath) {
   }
 }
 
-// হেল্পার ফাংশন: JSON ফাইলে লেখা
 function writeData(filePath, data) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf-8");
@@ -37,15 +36,11 @@ function writeData(filePath, data) {
   }
 }
 
-// ---------- API Routes ---------- //
-
-// ১. ডোনারদের তালিকা পাওয়া
 app.get("/api/donors", (req, res) => {
   const donors = readData(DONORS_FILE);
   res.json(donors);
 });
 
-// ২. নতুন ডোনার যুক্ত করা
 app.post("/api/donors", (req, res) => {
   const donors = readData(DONORS_FILE);
   const newDonor = {
@@ -55,7 +50,7 @@ app.post("/api/donors", (req, res) => {
     phone: req.body.phone,
     district: req.body.district,
     available: req.body.available !== undefined ? req.body.available : true,
-    status: req.body.status || "approved",
+    status: "approved", // স্যার, আপনার রিকোয়ারমেন্ট অনুযায়ী রেজিস্ট্রেশন করলেই অ্যাপ্রুভ হয়ে যাবে
     createdAt: new Date().toLocaleString()
   };
   donors.unshift(newDonor);
@@ -63,13 +58,11 @@ app.post("/api/donors", (req, res) => {
   res.status(201).json({ success: true, donor: newDonor });
 });
 
-// ৩. জরুরি রিকোয়েস্টের তালিকা পাওয়া
 app.get("/api/requests", (req, res) => {
   const requests = readData(REQUESTS_FILE);
   res.json(requests);
 });
 
-// ৪. নতুন জরুরি রিকোয়েস্ট তৈরি করা
 app.post("/api/requests", (req, res) => {
   const requests = readData(REQUESTS_FILE);
   const newRequest = {
@@ -90,7 +83,6 @@ app.post("/api/requests", (req, res) => {
   res.status(201).json({ success: true, request: newRequest });
 });
 
-// ৫. এডমিন লগইন ভেরিফিকেশন
 app.post("/api/admin/login", (req, res) => {
   const { email, password } = req.body;
   try {
@@ -104,7 +96,6 @@ app.post("/api/admin/login", (req, res) => {
   }
 });
 
-// ৬. স্ট্যাটাস আপডেট (Approve / Reject)
 app.patch("/api/status", (req, res) => {
   const { type, id, status } = req.body;
   const filePath = type === "donors" ? DONORS_FILE : REQUESTS_FILE;
@@ -121,7 +112,6 @@ app.patch("/api/status", (req, res) => {
   res.json({ success: true });
 });
 
-// ৭. ডাটা ডিলিট করা
 app.delete("/api/item", (req, res) => {
   const { type, id } = req.body;
   const filePath = type === "donors" ? DONORS_FILE : REQUESTS_FILE;
